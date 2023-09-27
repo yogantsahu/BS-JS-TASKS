@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task4</title>
+</head>
+<body>
+    
+    <button style="display: block;" onclick="d(),show1()">Show Date</button>
+    <p id="date"></p>
+
+
+    <button onclick="time(),show2()">Show Time</button>
+    <p id ="time"></p>
+    
+    <script>
+
+    function d(){
+        let date = new Date();
+        let day = date.getDate();
+        let month = date.getMonth();
+        let year = date.getFullYear();
+
+        const monthNames = [
+        'January', 'February', 'March', 'April',
+        'May', 'June', 'July', 'August',
+        'September', 'October', 'November', 'December'
+        ];
+
+
+        document.getElementById('date').innerText = day+"/"+monthNames[month]+"/"+year;
+    }
+
+
+    function time(){
+        let date = new Date();
+        document.getElementById('time').innerText = date;
+    }
+
+
+    function show1(){
+        let p = document.getElementById('date');
+        if(p.style.display == "block"){
+            p.style.display = "none";
+        }
+        else{
+            p.style.display = "block";
+        }
+    }
+
+    function show2(){
+        let p = document.getElementById('time');
+        if(p.style.display == "block"){
+            p.style.display = "none";
+        }
+        else{
+            p.style.display = "block";
+        }
+    }
+    </script>
+
+</body>
+</html>

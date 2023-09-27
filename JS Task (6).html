@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Instagram Login Page</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&display=swap">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            outline: none;
+            list-style: none;
+            text-decoration: none;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            background: #fafafa;
+            font-size: 14px;
+        }
+
+        .wrapper .header {
+            max-width: 350px;
+            width: 100%;
+            height: auto;
+            margin: 50px auto;
+        }
+
+        .wrapper .header .top {
+            background: #fff;
+            border: 1px solid #e6e6e6;
+            border-radius: 1px;
+            padding: 40px 40px 20px;
+        }
+
+        .wrapper .header .logo img {
+            display: block;
+            margin: 0 auto 35px;
+            width: 175px;
+        }
+
+        .wrapper .header .form .input_field {
+            margin-bottom: 5px;
+            position: relative; 
+        }
+        .wrapper .header .form .input_field.username::before {
+            content: '👤'; 
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .wrapper .header .form .input_field.password::before {
+            content: '🔒'; 
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .wrapper .header .form .input_field .input {
+            width: 100%;
+            background: #fafafa;
+            border: 1px solid #efefef;
+            font-size: 12px;
+            border-radius: 3px;
+            color: #262626;
+            padding: 10px 30px 10px 40px; 
+        }
+
+        .wrapper .header .form .input_field .input:focus {
+            border: 1px solid #b2b2b2;
+        }
+
+        .wrapper .header .form .btn {
+            margin: 10px 0;
+            background-color: #3897f0;
+            border: 1px solid #3897f0;
+            border-radius: 4px;
+            text-align: center;
+            padding: 5px;
+        }
+
+        .wrapper .header .form .btn a {
+            color: #fff;
+            display: block;
+        }
+
+        .wrapper .header .form .remember-me {
+            display: flex;
+            margin-top: 15px;
+        }
+        .wrapper .header .form .remember-me input[type="checkbox"] {
+            margin-right: 3px;
+}
+
+        .wrapper .header .form .forgot-password {
+            margin-left: auto; 
+        }
+
+        .wrapper .header .form .forgot-password a {
+            color: #3897f0;
+        }
+
+        .wrapper .signup p {
+            padding-top: 15px;
+            text-align: center;
+            color: #262626;
+        }
+
+        .wrapper .signup a {
+            color: #3897f0;
+        }
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <div class="header">
+        <div class="top">
+            <div class="logo">
+                <img src="https://assets.stickpng.com/images/5a4e432a2da5ad73df7efe7a.png" alt="instagram">
+            </div>
+            <div class="form">
+                <div class="input_field username">
+                    <input type="text" placeholder="Username" class="input">
+                </div>
+                <div class="input_field password">
+                    <input type="password" placeholder="Password" class="input">
+                </div>
+                <div class="btn"><a href="#">Log In</a></div>
+                <div class="remember-me">
+                    <input type="checkbox" id="remember" name="remember">
+                    <label for="remember">Remember me</label>
+                    <div class="forgot-password"><a href="#">Forgot Password?</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="signup">
+            <p>Don't have an account? <a href="#">Sign up</a></p>
+        </div>
+    </div>
+</div>
+
+
+
+
+    <script>
+
+
+    </script>
+</body>
+</html>

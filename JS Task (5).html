@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task5</title>
+
+    <style>
+        #m1,#m2,#m3,#m4{
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    
+    <table>
+        <tr>
+            <td>Name:</td>
+            <td><input type="text" id="i1"></td>
+            <td id="m1"></td>
+        </tr>
+        <tr>
+            <td>Email:</td>
+            <td><input type="text" id="i2"></td>
+            <td id="m2"></td>
+        </tr>
+        <tr>
+            <td>Website:</td>
+            <td><input type="text" id="i3"></td>
+            <td id="m3"></td>
+        </tr>
+        <tr>
+            <td>Message:</td>
+            <td><textarea id="i4"></textarea></td>
+            <td id="m4"></td>
+        </tr>
+    </table>
+
+    <button onclick="onSub()">Submit</button>
+
+
+    <script>
+
+    function onSub(){
+        let l1 = document.getElementById('i1').value;
+        l1 = l1.length;
+        
+        let l2 = document.getElementById('i2').value;
+        l2 = l2.length;
+        
+        let l3 = document.getElementById('i3').value;
+        l3 = l3.length;
+        
+        let l4 = document.getElementById('i4').value;
+        l4 = l4.length;
+
+        if(l1 == 0){
+            document.getElementById("m1").innerText = "This field is required";
+            document.getElementById('i1').style = "border:2px solid red;";
+        }
+        else{
+            document.getElementById("m1").innerHTML = "";
+            document.getElementById('i1').style = "border:1px solid black;";
+        }
+        if(l2 == 0){
+            document.getElementById("m2").innerText = "A valid email address is required";
+            document.getElementById('i2').style = "border:2px solid red;";
+        }
+        else{
+            document.getElementById("m2").innerHTML = "";
+            document.getElementById('i2').style = "border:1px solid black;";
+        }
+        if(l3 == 0){
+            document.getElementById("m3").innerText = "A valid URL is required";
+            document.getElementById('i3').style = "border:2px solid red;";
+        }
+        else{
+            document.getElementById("m3").innerHTML = "";
+            document.getElementById('i3').style = "border:1px solid black;";
+        }
+        if(l4 == 0){
+            document.getElementById("m4").innerText = "This field is required";
+            document.getElementById('i4').style = "border:2px solid red;";
+        }
+        else{
+            document.getElementById("m4").innerHTML = "";
+            document.getElementById('i4').style = "border:1px solid black;";
+        }
+    }   
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Task7</title>
+   <style>
+      body{
+         overflow: hidden;
+      }
+      *{
+         margin: 0;
+      }
+      img{
+         transform: scaleX(-1);
+         width: 150px;
+         position: relative;
+      }
+   </style>
+</head>
+<body>
+   <img id="myimg" src="https://clipart-library.com/images/kTMbG47bc.png">
+   <center>
+      <p>Click the following buttons to handle animation</p>
+      <button onclick="anim()">Start</button>
+      <button onclick="stop()">Stop</button>
+   </center>
+   <script>
+      img = document.getElementById("myimg");
+      l = 0;
+      function anim(){
+         img.style.left = l + 0.1 +"vw";
+         l = l + 0.5;
+         if(l >= 100){
+            l = -10;
+         }
+         s = setTimeout(anim,100);
+      }
+      function stop(){
+         clearInterval(s);
+      }
+   </script>
+</body>
+</html>

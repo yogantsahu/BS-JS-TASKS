@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task1</title>
+</head>
+<body>
+
+    <script>
+        let x = prompt("Enter a number");
+        let a = x;
+        var ans = 0;
+        while( x != 0 ){
+            let rem = x%10;
+            ans = (ans * 10) + rem;
+            x = Math.floor(x/10);
+        }
+        alert(`The reverse of ${a} is: `+ ans);
+    </script>
+</body>
+</html>
